@@ -4,10 +4,9 @@ export const createCourse = async (req, res) => {
     try {
         const data = req.body;
 
-        const courseImage = req.file ? req.file.filename : null;
-        if (courseImage) {
-            data.courseImage = courseImage;
-        }
+        let courseImage = req.file ? req.file.filename : null;
+        data.courseImage = courseImage;
+        
 
         const course = await Course.create(data);
 
@@ -22,3 +21,30 @@ export const createCourse = async (req, res) => {
         });
     }
 };
+
+export const getCourses = async (req, res) => {
+    try{
+        const { limite = 5, desde = 0 } = req.query
+        const query = { status: true }
+
+        const [total, courses ] = await Promise.all([
+            Course.countDocuments(query),
+            Course.find(query)
+                .skip(Number(desde))
+                .limit(Number(limite))
+                .select("-status -_id")
+        ])
+
+        return res.status(200).json({
+            success: true,
+            total,
+            courses
+        })
+    }catch(err){
+        return res.status(500).json({
+            success: false,
+            message: "Error al obtener los cursos",
+            error: err.message
+        })
+    }
+}
