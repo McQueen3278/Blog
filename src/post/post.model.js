@@ -13,9 +13,18 @@ const postSchema = new Schema({
         type: String,
         required: true,
       },
+      course: {
+        type: Schema.Types.ObjectId,
+        ref: 'Course',
+        required: true,
+      },
       status: {
         type: Boolean,
         default: true,
+      },
+      uploadAt: {
+        type: Date,
+        default: Date.now,
       },
 },   {
         versionKey: false,

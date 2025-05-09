@@ -17,8 +17,10 @@ const courseSchema = new Schema({
         type: String,
         required: false,
     },
-
-
+    documents: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Post',
+    }],
     status: {
         type: Boolean,
         default: 'true',
