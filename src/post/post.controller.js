@@ -44,6 +44,7 @@ export const createPost = async (req, res) => {
 };
 
 
+
 export const getPostWithComments = async (req, res) => {
     try {
       const { id } = req.params;

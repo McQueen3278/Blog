@@ -58,7 +58,14 @@ export const getCourses = async (req, res) => {
         .populate({
           path: "documents",
           model: "Post",
-          select: "title description document uploadAt",
+          select: "title description document uploadAt comments",
+          options: { sort: { uploadAt: -1 } }, 
+          populate: {
+            path: "comments",
+            model: "Comment",
+            select: "username content createdAt",
+            options: { sort: { createdAt: -1 } } 
+          }
         });
   
       if (!course) {
