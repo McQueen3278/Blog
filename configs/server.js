@@ -7,6 +7,8 @@ import morgan from "morgan"
 import { dbConnection } from './mongo.js'
 import apiLimiter from '../src/middlewares/request-limit.js'
 import { swaggerDocs, swaggerUI } from "./swagger.js";
+import { deleteFileOnError } from '../src/middlewares/delete-file-on-error.js'
+import courseRoutes from "../src/courses/course.routes.js"
 
 const middlewares = (app) => {
     app.use(express.urlencoded({ extended: true }));
@@ -29,9 +31,11 @@ const middlewares = (app) => {
     }));
     app.use(morgan("dev"))
     app.use(apiLimiter)
+    app.use(deleteFileOnError)
 }
 
 const routes = (app) => {
+    app.use("/blog/v1/course", courseRoutes)
     app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerDocs))
 
 }

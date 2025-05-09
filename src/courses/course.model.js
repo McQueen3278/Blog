@@ -13,6 +13,19 @@ const courseSchema = new Schema({
         type: String,
         required: false,
     },
+    couurseImage:{
+        type: String,
+        required: false,
+    },
+    document: [{
+        fileName: String,
+        filePath: String,
+        uploadedAt: {
+            type: Date,
+            default: Date.now
+        }
+    }],
+
     status: {
         type: Boolean,
         default: 'true',
