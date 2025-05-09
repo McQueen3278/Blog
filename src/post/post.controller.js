@@ -42,3 +42,35 @@ export const createPost = async (req, res) => {
     });
   }
 };
+
+
+export const getPostWithComments = async (req, res) => {
+    try {
+      const { id } = req.params;
+  
+      const post = await Post.findById(id)
+        .populate({
+          path: 'comments',
+          model: 'Comment',
+          select: 'username content createdAt',
+        });
+  
+      if (!post) {
+        return res.status(404).json({
+          success: false,
+          message: 'Post no encontrado.',
+        });
+      }
+  
+      return res.status(200).json({
+        success: true,
+        post,
+      });
+    } catch (error) {
+      return res.status(500).json({
+        success: false,
+        message: 'Error al obtener el post.',
+        error: error.message,
+      });
+    }
+  };

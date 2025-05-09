@@ -10,6 +10,7 @@ import { swaggerDocs, swaggerUI } from "./swagger.js";
 import { deleteFileOnError } from '../src/middlewares/delete-file-on-error.js'
 import courseRoutes from "../src/courses/course.routes.js"
 import postRoutes from "../src/post/post.routes.js"
+import commentRoutes from "../src/comment/comment.routes.js"
 
 const middlewares = (app) => {
     app.use(express.urlencoded({ extended: true }));
@@ -38,6 +39,7 @@ const middlewares = (app) => {
 const routes = (app) => {
     app.use("/blog/v1/course", courseRoutes)
     app.use("/blog/v1/post", postRoutes)
+    app.use("/blog/v1/comment", commentRoutes)
     app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerDocs))
 
 }
