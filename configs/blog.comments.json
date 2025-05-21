@@ -1,0 +1,14 @@
+[{
+  "_id": {
+    "$oid": "682d8197eeb0e21d385e7da0"
+  },
+  "username": "Harol",
+  "content": "Excelente investigacion",
+  "post": {
+    "$oid": "682d5e9f04985632dd73cfcf"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-21T07:32:39.603Z"
+  }
+}]

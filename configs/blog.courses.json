@@ -1,0 +1,34 @@
+[{
+  "_id": {
+    "$oid": "682d51ef04985632dd73cf7c"
+  },
+  "name": "Taller III",
+  "professor": "Braulio Echeverria",
+  "courseImage": "JsLogo-1747800559993.png",
+  "documents": [
+    {
+      "$oid": "682d5e9f04985632dd73cfcf"
+    }
+  ],
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "682d51fc04985632dd73cf7e"
+  },
+  "name": "Tecnologia III",
+  "professor": "Braulio Echeverria",
+  "courseImage": "Git-1747800572865.jpg",
+  "documents": [],
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "682d521904985632dd73cf80"
+  },
+  "name": "Practicas Supervisadas",
+  "professor": "Braulio Echeverria",
+  "courseImage": "ReactLogo-1747800601032.png",
+  "documents": [],
+  "status": true
+}]

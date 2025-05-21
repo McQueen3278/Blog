@@ -19,6 +19,8 @@ const __dirname = path.dirname(__filename);
 
 const middlewares = (app) => {
     app.use('/uploads/course-images', express.static(path.join(__dirname, '../public/uploads/course-images')));
+app.use('/public/uploads/course-documents', express.static(path.join(__dirname, 'uploads/course-documents')));
+app.use('/uploads', express.static(path.join(__dirname, '../public/uploads')));
 
     app.use(express.urlencoded({ extended: true }));
     app.use(express.json());
@@ -30,19 +32,21 @@ const middlewares = (app) => {
     }));
 
     app.use(helmet({
-        contentSecurityPolicy: {
-          directives: {
-            defaultSrc: ["'self'", "http://localhost:5173"],
-            scriptSrc: ["'self'", "'unsafe-inline'", "http://localhost:5173"],
-            connectSrc: ["'self'", "http://localhost:5173"],
-            imgSrc: ["'self'", "data:", "http://localhost:5173"],
-            styleSrc: ["'self'", "'unsafe-inline'", "http://localhost:5173"]
-          }
-        },
-        crossOriginEmbedderPolicy: false,
-        crossOriginResourcePolicy: { policy: "cross-origin" },
-        referrerPolicy: { policy: "no-referrer" }
-      }));
+    frameguard: false,
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'", "http://localhost:5173"],
+        scriptSrc: ["'self'", "'unsafe-inline'", "http://localhost:5173"],
+        connectSrc: ["'self'", "http://localhost:5173"],
+        imgSrc: ["'self'", "data:", "http://localhost:5173"],
+        styleSrc: ["'self'", "'unsafe-inline'", "http://localhost:5173"]
+      }
+    },
+    crossOriginEmbedderPolicy: false,
+    crossOriginResourcePolicy: { policy: "cross-origin" },
+    referrerPolicy: { policy: "no-referrer" }
+}));
+
     app.use(morgan("dev"));
     app.use(apiLimiter);
     app.use(deleteFileOnError);

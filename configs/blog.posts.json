@@ -1,0 +1,20 @@
+[{
+  "_id": {
+    "$oid": "682d5e9f04985632dd73cfcf"
+  },
+  "title": "Crear Blog",
+  "description": "Creacion de blog para que los demas vean las tareas",
+  "document": "/uploads/course-documents/Blog de aprendizaje-1747803807851.pdf",
+  "course": {
+    "$oid": "682d51ef04985632dd73cf7c"
+  },
+  "comments": [
+    {
+      "$oid": "682d8197eeb0e21d385e7da0"
+    }
+  ],
+  "status": true,
+  "uploadAt": {
+    "$date": "2025-05-21T05:03:27.854Z"
+  }
+}]
