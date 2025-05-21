@@ -11,5 +11,6 @@ router.get("/getCourses", getCourses);
 
 router.get("/getCourse/:id", getCourseById);
 
+
 export default router;
 

@@ -4,6 +4,6 @@ import { commentValidator } from "../middlewares/comment-validator.js";
 
 const router = Router();  
 
-router.post("/addComment", commentValidator, createComment);
+router.post("/addComment/:postId", commentValidator, createComment);
 
 export default router;

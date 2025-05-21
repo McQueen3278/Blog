@@ -3,7 +3,8 @@ import Post from '../post/post.model.js';
 
 export const createComment = async (req, res) => {
     try {
-      const { postId, username, content } = req.body;
+      const {postId} = req.params;
+      const { username, content } = req.body;
   
       const post = await Post.findById(postId);
       if (!post) {
