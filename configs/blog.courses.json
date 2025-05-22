@@ -8,6 +8,12 @@
   "documents": [
     {
       "$oid": "682d5e9f04985632dd73cfcf"
+    },
+    {
+      "$oid": "682ea1bb692c9ddd63732a42"
+    },
+    {
+      "$oid": "682eb0ad7f41797128409288"
     }
   ],
   "status": true
@@ -19,7 +25,14 @@
   "name": "Tecnologia III",
   "professor": "Braulio Echeverria",
   "courseImage": "Git-1747800572865.jpg",
-  "documents": [],
+  "documents": [
+    {
+      "$oid": "682eb20f7f417971284092a2"
+    },
+    {
+      "$oid": "682eb23c7f417971284092a5"
+    }
+  ],
   "status": true
 },
 {
@@ -29,6 +42,19 @@
   "name": "Practicas Supervisadas",
   "professor": "Braulio Echeverria",
   "courseImage": "ReactLogo-1747800601032.png",
-  "documents": [],
+  "documents": [
+    {
+      "$oid": "682eb2c57f417971284092be"
+    },
+    {
+      "$oid": "682eb2e67f417971284092c1"
+    },
+    {
+      "$oid": "682eb3d57f417971284092e5"
+    },
+    {
+      "$oid": "682eb41ac46e2b5373447323"
+    }
+  ],
   "status": true
 }]

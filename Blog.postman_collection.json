@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "7f5c3fa6-7b84-4d16-884b-a3b53747aafe",
+		"name": "Blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41662644"
+	},
+	"item": [
+		{
+			"name": "Course",
+			"item": [
+				{
+					"name": "Create Course",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Practicas Supervisadas",
+									"type": "text"
+								},
+								{
+									"key": "professor",
+									"value": "Braulio Echeverria",
+									"type": "text"
+								},
+								{
+									"key": "courseImage",
+									"type": "file",
+									"src": "/C:/Users/harol/Downloads/Git.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/blog/v1/course/addCourse",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"blog",
+								"v1",
+								"course",
+								"addCourse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/blog/v1/course/getCourses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"blog",
+								"v1",
+								"course",
+								"getCourses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Course By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/blog/v1/course/getCourse/681d9e8c5444f1a139dea011",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"blog",
+								"v1",
+								"course",
+								"getCourse",
+								"681d9e8c5444f1a139dea011"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Add Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Alamacenadora",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Proyecto de almacenadora",
+									"type": "text"
+								},
+								{
+									"key": "course",
+									"value": "682d521904985632dd73cf80",
+									"type": "text"
+								},
+								{
+									"key": "document",
+									"type": "file",
+									"src": "/C:/Users/harol/Downloads/Laboratorio #4 - Almacenadora.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/blog/v1/post/addPost",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"blog",
+								"v1",
+								"post",
+								"addPost"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Investigacion_API_REST",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Esta es una investigacion sobre que es API_REST",
+									"disabled": true
+								},
+								{
+									"key": "course",
+									"value": "681d941a4fc86f06615ee2b9",
+									"disabled": true
+								},
+								{
+									"key": "document",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Post with comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/blog/v1/post/getPostWithComments/681dab95dbf56eed7e042523",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"blog",
+								"v1",
+								"post",
+								"getPostWithComments",
+								"681dab95dbf56eed7e042523"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "Add Comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Harol\",\r\n    \"content\": \"Excelente investigacion\",\r\n    \"postId\": \"681dab95dbf56eed7e042523\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/blog/v1/comment/addComment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"blog",
+								"v1",
+								"comment",
+								"addComment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

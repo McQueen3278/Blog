@@ -1,20 +1,126 @@
 [{
   "_id": {
-    "$oid": "682d5e9f04985632dd73cfcf"
+    "$oid": "682ea1bb692c9ddd63732a42"
   },
-  "title": "Crear Blog",
+  "title": "Crear Blog de Aprendizaje",
   "description": "Creacion de blog para que los demas vean las tareas",
-  "document": "/uploads/course-documents/Blog de aprendizaje-1747803807851.pdf",
+  "document": "Blog de aprendizaje-1747886523388.pdf",
   "course": {
     "$oid": "682d51ef04985632dd73cf7c"
   },
   "comments": [
     {
-      "$oid": "682d8197eeb0e21d385e7da0"
+      "$oid": "682ea565692c9ddd63732a64"
+    },
+    {
+      "$oid": "682ea576692c9ddd63732a6a"
     }
   ],
   "status": true,
   "uploadAt": {
-    "$date": "2025-05-21T05:03:27.854Z"
+    "$date": "2025-05-22T04:02:03.395Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682eb0ad7f41797128409288"
+  },
+  "title": "Gestión Hotelera",
+  "description": "Realizar API de gestión hotelera",
+  "document": "Proyecto bim II-1747890349203.pdf",
+  "course": {
+    "$oid": "682d51ef04985632dd73cf7c"
+  },
+  "comments": [
+    {
+      "$oid": "682eb0c87f41797128409293"
+    },
+    {
+      "$oid": "682eb0d77f41797128409299"
+    }
+  ],
+  "status": true,
+  "uploadAt": {
+    "$date": "2025-05-22T05:05:49.210Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682eb20f7f417971284092a2"
+  },
+  "title": "Investigacion API_REST",
+  "description": "Investigar que es API REST",
+  "document": "Investigacion_API_REST-1747890703302.pdf",
+  "course": {
+    "$oid": "682d51fc04985632dd73cf7e"
+  },
+  "comments": [
+    {
+      "$oid": "682eb26c7f417971284092b5"
+    }
+  ],
+  "status": true,
+  "uploadAt": {
+    "$date": "2025-05-22T05:11:43.304Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682eb23c7f417971284092a5"
+  },
+  "title": "Manual de Usuario",
+  "description": "Manual de Usuario de Hotel",
+  "document": "Manual de Usuario-1747890748107.pdf",
+  "course": {
+    "$oid": "682d51fc04985632dd73cf7e"
+  },
+  "comments": [
+    {
+      "$oid": "682eb2537f417971284092ae"
+    }
+  ],
+  "status": true,
+  "uploadAt": {
+    "$date": "2025-05-22T05:12:28.198Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682eb3d57f417971284092e5"
+  },
+  "title": "Alamacenadora",
+  "description": "Proyecto de almacenadora",
+  "document": "Almacenadora-1747891157439.pdf",
+  "course": {
+    "$oid": "682d521904985632dd73cf80"
+  },
+  "comments": [
+    {
+      "$oid": "682eb436c46e2b537344732c"
+    }
+  ],
+  "status": true,
+  "uploadAt": {
+    "$date": "2025-05-22T05:19:17.440Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682eb41ac46e2b5373447323"
+  },
+  "title": "Propuesta de Proyecto",
+  "description": "Propuesta de Proyecto Bim III",
+  "document": "Propuesta-1747891226515.pdf",
+  "course": {
+    "$oid": "682d521904985632dd73cf80"
+  },
+  "comments": [
+    {
+      "$oid": "682eb455c46e2b5373447336"
+    }
+  ],
+  "status": true,
+  "uploadAt": {
+    "$date": "2025-05-22T05:20:26.522Z"
   }
 }]

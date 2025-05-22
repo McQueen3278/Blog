@@ -20,7 +20,9 @@ const options ={
         ]
     },
     apis:[
-        
+        "./src/courses/*.js",
+        "./src/post/*.js",
+        "./src/comment/*.js",
     ]
 }
 

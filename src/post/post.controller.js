@@ -13,7 +13,7 @@ export const createPost = async (req, res) => {
       });
     }
 
-    const document = `/uploads/course-documents/${req.file.filename}`;
+    const document = req.file.filename;
 
     const newPost = new Post({
       title,
