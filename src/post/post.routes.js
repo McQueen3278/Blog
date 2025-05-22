@@ -200,6 +200,6 @@ router.post("/posts", uploadCourseDocument.single("document"), postValidator, cr
  *                   type: string
  *                   example: "Error del servidor al recuperar la publicación."
  */
-router.get("/posts/:id", getPostWithComments);
+router.get("/getPostWithComments/:id", getPostWithComments);
 
 export default router;
