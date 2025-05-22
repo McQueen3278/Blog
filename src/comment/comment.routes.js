@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { addComment } from "./comment.controller.js";
+import { createComment } from "./comment.controller.js";
 import { commentValidator } from "../middlewares/comment-validator.js";
 
 const router = Router();
@@ -73,6 +73,6 @@ const router = Router();
  *       500:
  *         description: Error interno del servidor
  */
-router.post("/addComment/:postId", commentValidator, addComment);
+router.post("/addComment/:postId", commentValidator, createComment);
 
 export default router;
